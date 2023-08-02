@@ -13,7 +13,7 @@ namespace UserRegistrationProblem
                 Console.WriteLine("Enter the option to execute\n 1.Validate First Name\n " +
                     "2.Validate Last Name\n 3.Validate Email\n 4.Validate Phone Number\n " +
                     "5.Validate minimum character length\n 6.Validate for atleast one upper case also\n " +
-                    "7.Validate for atleast one numeric also\n 8.Exit");
+                    "7.Validate for atleast one numeric also\n 8.Validate for atleast one special character\n 9.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -53,6 +53,11 @@ namespace UserRegistrationProblem
                         validate.Numeric(Numeric);
                         break;
                     case 8:
+                        Console.WriteLine("Enter the password to validate:");
+                        string SpecialCharacter = Console.ReadLine();
+                        validate.SpecialCharacter(SpecialCharacter);
+                        break;
+                    case 9:
                         flag = false;
                         break;
                 }
