@@ -12,7 +12,8 @@ namespace UserRegistrationProblem
             {
                 Console.WriteLine("Enter the option to execute\n 1.Validate First Name\n " +
                     "2.Validate Last Name\n 3.Validate Email\n 4.Validate Phone Number\n " +
-                    "5.Validate minimum character length\n 6.Exit");
+                    "5.Validate minimum character length\n 6.Validate for atleast one upper case\n " +
+                    "7.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -42,6 +43,11 @@ namespace UserRegistrationProblem
                         validate.CheckCharacter(Character);
                         break;
                     case 6:
+                        Console.WriteLine("Enter the password to validate:");
+                        string UpperCase = Console.ReadLine();
+                        validate.UpperCase(UpperCase);
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
