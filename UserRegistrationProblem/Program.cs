@@ -11,7 +11,7 @@ namespace UserRegistrationProblem
             while (flag)
             {
                 Console.WriteLine("Enter the option to execute\n 1.Validate First Name\n " +
-                    "2.Validate Last Name\n 3.Validate Email\n 4.Exit");
+                    "2.Validate Last Name\n 3.Validate Email\n 4.Validate Phone Number\n 5.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -31,6 +31,11 @@ namespace UserRegistrationProblem
                         validate.Email(Email);
                         break;
                     case 4:
+                        Console.WriteLine("Enter the phone number to validate:");
+                        string PhoneNumber = Console.ReadLine();
+                        validate.PhoneNumber(PhoneNumber);
+                        break;
+                    case 5:
                         flag = false;
                         break;
                 }
