@@ -8,7 +8,7 @@ namespace UserRegistrationTest
         [Test]
         public void TestFirstName()
         {
-            string input = "Riya";
+            string input = "Yuvanthika";
             Validate firstName = new Validate();
             bool result = firstName.ValidateFirstName(input);
             string value = "";
@@ -25,7 +25,7 @@ namespace UserRegistrationTest
         [Test]
         public void TestLastName()
         {
-            string input = "Reji";
+            string input = "Sarathy";
             Validate lastName = new Validate();
             bool result = lastName.ValidateLastName(input);
             string value = "";
@@ -42,7 +42,7 @@ namespace UserRegistrationTest
         [Test]
         public void TestEmail()
         {
-            string input = "riyareji@gmail.com";
+            string input = "yuvanthika@gmail.com";
             Validate email = new Validate();
             bool result = email.ValidateEmail(input);
             string value = "";
@@ -76,7 +76,7 @@ namespace UserRegistrationTest
         [Test]
         public void TestCheckCharacter()
         {
-            string input = "riya@1234";
+            string input = "Yuvanthika@1234";
             Validate character = new Validate();
             bool result = character.ValidateCheckCharacter(input);
             string value = "";
@@ -93,7 +93,7 @@ namespace UserRegistrationTest
         [Test]
         public void TestUpperCase()
         {
-            string input = "Riya1234";
+            string input = "Yuvanthika07";
             Validate uppercase = new Validate();
             bool result = uppercase.ValidateUpperCase(input);
             string value = "";
@@ -110,7 +110,7 @@ namespace UserRegistrationTest
         [Test]
         public void TestNumeric()
         {
-            string input = "Riya1234";
+            string input = "Yuvanthika1234";
             Validate numeric = new Validate();
             bool result = numeric.ValidateNumeric(input);
             string value = "";
@@ -127,7 +127,7 @@ namespace UserRegistrationTest
         [Test]
         public void TestSpecialCharacter()
         {
-            string input = "Riya@1234";
+            string input = "Yuvanthika@1234";
             Validate special = new Validate();
             bool result = special.ValidateSpecialCharacter(input);
             string value = "";

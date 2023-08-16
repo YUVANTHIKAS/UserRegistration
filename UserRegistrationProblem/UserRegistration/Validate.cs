@@ -11,7 +11,7 @@ namespace UserRegistration
     {
         string firstName = "^[A-Z]{1}[a-z]{2,}$";
         string lastName = "^[A-Z]{1}[a-z]{2,}$";
-        string email = "^[a-z]+[._+-]{0,1}[a-z]+[@]{1}[a-z]+[.]{1}[a-z]{2,3}([.]{1}[a-z]{2}){0,1}$";
+        string email = "^([a-z0-9]{0,}){0,1}([a-z0-9]{1,})(@{1}[a-z0-9]{1,})([a-z]{0,}{0,1}[a-z]{2,})]{0,}$";
         string phoneNumber = "^([0-9]{2})([ ]{1})([0-9]{10})$";
         string character = "^.{8,}$";
         string upperCase = "^(?=.*[A-Z]).{8,}$";
