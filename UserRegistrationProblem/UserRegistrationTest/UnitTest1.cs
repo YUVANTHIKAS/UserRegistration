@@ -8,66 +8,138 @@ namespace UserRegistrationTest
         [Test]
         public void TestFirstName()
         {
-            string input = "Yuvanthika";
+            string input = "Riya";
             Validate firstName = new Validate();
-            bool result = firstName.FirstName(input);
-            Assert.IsTrue(result);
+            bool result = firstName.ValidateFirstName(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
+            Assert.AreEqual(value, "HAPPY");
         }
         [Test]
         public void TestLastName()
         {
-            string input = "Sarathy";
+            string input = "Reji";
             Validate lastName = new Validate();
-            bool result = lastName.LastName(input);
-            Assert.IsTrue(result);
+            bool result = lastName.ValidateLastName(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
+            Assert.AreEqual(value, "HAPPY");
         }
         [Test]
         public void TestEmail()
         {
-            string input = "yuvanthikasarathy@gmail.com";
+            string input = "riyareji@gmail.com";
             Validate email = new Validate();
-            bool result = email.Email(input);
-            Assert.IsTrue(result);
+            bool result = email.ValidateEmail(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
+            Assert.AreEqual(value, "HAPPY");
         }
         [Test]
         public void TestPhoneNumber()
         {
             string input = "91 9012345678";
             Validate phonenumber = new Validate();
-            bool result = phonenumber.PhoneNumber(input);
-            Assert.IsTrue(result);
+            bool result = phonenumber.ValidatePhoneNumber(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
+            Assert.AreEqual(value, "HAPPY");
         }
         [Test]
         public void TestCheckCharacter()
         {
-            string input = "yuva@1234";
+            string input = "riya@1234";
             Validate character = new Validate();
-            bool result = character.CheckCharacter(input);
-            Assert.IsTrue(result);
+            bool result = character.ValidateCheckCharacter(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
+            Assert.AreEqual(value, "HAPPY");
         }
         [Test]
         public void TestUpperCase()
         {
-            string input = "Yuva1234";
+            string input = "Riya1234";
             Validate uppercase = new Validate();
-            bool result = uppercase.UpperCase(input);
-            Assert.IsTrue(result);
+            bool result = uppercase.ValidateUpperCase(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
+            Assert.AreEqual(value, "HAPPY");
         }
         [Test]
         public void TestNumeric()
         {
-            string input = "Yuva1234";
+            string input = "Riya1234";
             Validate numeric = new Validate();
-            bool result = numeric.Numeric(input);
-            Assert.IsTrue(result);
+            bool result = numeric.ValidateNumeric(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
+            Assert.AreEqual(value, "HAPPY");
         }
         [Test]
         public void TestSpecialCharacter()
         {
-            string input = "yuvaS@1234";
+            string input = "Riya@1234";
             Validate special = new Validate();
-            bool result = special.SpecialCharacter(input);
-            Assert.IsTrue(result);
+            bool result = special.ValidateSpecialCharacter(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
+            Assert.AreEqual(value, "HAPPY");
         }
     }
 }
