@@ -141,5 +141,57 @@ namespace UserRegistrationTest
             }
             Assert.AreEqual(value, "HAPPY");
         }
+        [Test]
+        public void TestAllTrueEmails()
+        {
+            string[] input = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com",
+                "abc-100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com" };
+            Validate trueEmails = new Validate();
+            foreach (var item in input)
+            {
+                bool result = trueEmails.ValidateEmail(item);
+                Assert.IsTrue(result);
+            }
+        }
+        [Test]
+        public void TestFirstNameRegex()
+        {
+            string input = "Yuvanthika";
+            Validate firstName = new Validate();
+            bool result = firstName.ValidateFirstNameRegex(input);
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void TestLastNameRegex()
+        {
+            string input = "Sarathy";
+            Validate lastName = new Validate();
+            bool result = lastName.ValidateLastNameRegex(input);
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void TestEmailRegex()
+        {
+            string input = "Yuvanthika@gmail.com";
+            Validate email = new Validate();
+            bool result = email.ValidateEmailRegex(input);
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void TestPhoneNumberRegex()
+        {
+            string input = "91 9012345678";
+            Validate phonenumber = new Validate();
+            bool result = phonenumber.ValidatePhoneNumberRegex(input);
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void TestPasswordRegex()
+        {
+            string input = "Yuvanthika@1234";
+            Validate password = new Validate();
+            bool result = password.ValidatePasswordRegex(input);
+            Assert.IsTrue(result);
+        }
     }
 }

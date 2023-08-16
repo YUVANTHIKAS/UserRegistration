@@ -57,5 +57,12 @@ namespace UserRegistration
             bool result = Regex.IsMatch(input, specialCharacter);
             return result;
         }
+
+        public bool ValidateFirstNameRegex(string input) => Regex.IsMatch(input, firstName) ? true : false;
+        public bool ValidateLastNameRegex(string input) => Regex.IsMatch(input, lastName) ? true : false;
+        public bool ValidateEmailRegex(string input) => Regex.IsMatch(input, email) ? true : false;
+        public bool ValidatePhoneNumberRegex(string input) => Regex.IsMatch(input, phoneNumber) ? true : false;
+        public bool ValidatePasswordRegex(string input) => Regex.IsMatch(input, specialCharacter) ? true : false;
+
     }
 }
